@@ -1,0 +1,6 @@
+{
+    "netCoreProjectFile": true,
+    "packageName": "ServiceChannel.Api",
+    "targetFramework": "net7.0",
+    "nullableReferenceTypes": true
+}
