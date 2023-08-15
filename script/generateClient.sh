@@ -17,19 +17,21 @@ else
 fi
 
 
+openapi-generator-cli version-manager set 7.0.0-beta
 
-# Execute latest released openapi-generator-cli
 openapi-generator-cli version
 
 # To "install" a specific version, set the variable in .bashrc/.bash_profile
 curl https://developer.servicechannel.com/api/docs?name=ServiceAutomation > $SCRIPT_PATH/serviceChannelSwagger.json
 openapi-generator-cli generate \
     -i $SCRIPT_PATH/serviceChannelSwagger.json \
-    -g csharp-netcore \
+    -g aspnetcore \
     -o $PROJECT_PATH \
     -c $SCRIPT_PATH/config.json \
     --skip-validate-spec \
     --remove-operation-id-prefix \
     --model-name-prefix SC
 
+cat $SCRIPT_PATH/regen.txt >> $PROJECT_PATH/README.md
 
+cat $SCRIPT_PATH/gitignore.template > .gitignore

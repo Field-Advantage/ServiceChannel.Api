@@ -1,0 +1,5 @@
+<a id="regenerating"></a>
+
+## How to regenerate this project
+
+There is a script in `/script` called `generateClient.sh` that will do all the heavy lifting for you. Check the config.json for options and run `./script/generateClient.sh` and bingo bango, you're good to go.
